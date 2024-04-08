@@ -1,0 +1,247 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: #fff;
+}
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+.note-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.note-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.note-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.note-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+.note-details button {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 3px;
+  border-radius: 50%;
+  color: #333;
+}
+
+/* new note form */
+label,
+input {
+  display: block;
+}
+form {
+  border: 1px #333;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px 20px; /* Adjust padding for better visibility */
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
+
+.card {
+  height: 400px;
+  width: 300px;
+  background: #fff;
+  border-radius: 4px;
+  shadow: 1px;
+  margin: 20px auto;
+  padding: 10px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Add margin bottom to create space between buttons and note content */
+  margin-top: 10px;
+}
+
+.edit-window {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  z-index: 1000; /* Ensure edit window appears above other content */
+  max-width: 600px; /* Adjust max-width to prevent window from being too wide */
+  width: 100%;
+  border-color: #333;
+}
+
+.edit-window h3 {
+  margin-top: 0;
+}
+
+.edit-window label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.edit-window input {
+  width: calc(100% - 12px);
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-container {
+  margin-top: 20px; /* Adjust as needed for spacing */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Spread buttons horizontally */
+}
+
+.edit-window .submit,
+.edit-window .cancel {
+  display: flex;
+  position: absolute;
+  background-color: var(--primary);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px; /* Add padding for better appearance */
+}
+
+.edit-window .cancel{
+  background-color: var(--error);
+  margin-right: 10px;
+}
+
+.edit-window .submit{
+  background-color: var(--primary);
+}
+
+/*navbar*/
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a{
+  margin-left: 10px;
+  background: var(--primary);
+  color: #fff;
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+}
+
+nav button {
+  background: var(--primary);
+  color:  #fff;
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+
+/*Auth Forms*/
+form.signup, form.login {
+  max-width: 400px;
+  margin: 40px auto;   /* Auto centralizes the form */
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
