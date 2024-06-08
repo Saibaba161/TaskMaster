@@ -7,7 +7,7 @@ export const useLogin = () => {
     const { dispatch } = useAuthContext()
 
     const login = async (email, password) => {
-        setIsLoading(true)                              // Set isLoading to true when starting the signup process
+        setIsLoading(true)                              // Set isLoading to true when starting the login process
         setError(null)
 
         const response = await fetch('/api/user/login', {
@@ -27,7 +27,7 @@ export const useLogin = () => {
         if(response.ok) {
             // saving the user to local storage
             localStorage.setItem('user', JSON.stringify(json));
-
+            
             // update the auth context
             dispatch({ type: 'LOGIN', payload: json });
 
