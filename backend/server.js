@@ -1,12 +1,23 @@
 require('dotenv').config()
 
 const express = require('express')
-const notesRoutes = require('./routes/notes')
 const mongoose = require('mongoose')
+const cors = require('cors')
+
+const notesRoutes = require('./routes/notes')
 const userRoutes = require('./routes/userRoutes')
 
 //express app
 const app = express()
+
+app.use(cors(
+    {
+        origin: ['http://localhost:3000','https://taskmaster-frontend-zeta.vercel.app'],
+        methods:['POST', 'GET', 'DELETE', 'PATCH', 'OPTIONS'],
+        credentials: true,
+        allowedHeaders: ['Content-Type', 'Authorization']
+    }
+))
 
 //middleware
 app.use(express.json())
