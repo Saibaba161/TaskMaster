@@ -12,7 +12,7 @@ const app = express()
 
 app.use(cors(
    {
-        origin: ['https://task-master-frontend-fawn.vercel.app/'],
+        origin: ['https://task-master-frontend-fawn.vercel.app'],
         methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
         credentials: true,
         allowedHeaders:['Content-Type', 'Authorization']

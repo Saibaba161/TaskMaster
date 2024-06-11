@@ -1,5 +1,5 @@
 {
-  "proxy":"https://task-master-backend-five.vercel.app/",
+  "proxy":"https://task-master-backend-five.vercel.app",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
