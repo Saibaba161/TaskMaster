@@ -28,7 +28,7 @@ app.use('/api/notes', notesRoutes)
 app.use('/api/user', userRoutes)
 
 //connect to db
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         //Listen for requests
         app.listen(process.env.PORT, () => {
