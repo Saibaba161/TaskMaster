@@ -1,6 +1,5 @@
 import { useState } from "react"
 import useAuthContext from "./useAuthContext"
-import { response, text } from "express"
 
 export const useLogin = () => {
     const [error, setError] = useState(null)
@@ -20,9 +19,7 @@ export const useLogin = () => {
                 'Access-Control-Request-Method': 'POST'
             },
         })
-        //const json = await response.json();
-        .then(response => response.text())
-        .then(text => console.log(text))
+        const json = await response.json();
 
         if (!response.ok) {
             setIsLoading(false)
