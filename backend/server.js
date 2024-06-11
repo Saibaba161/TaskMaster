@@ -12,7 +12,7 @@ const app = express()
 
 app.use(cors(
    {
-        origin: ['http://localhost:3000','https://taskmaster-frontend-zeta.vercel.app'],
+        origin: ['https://task-master-frontend-fawn.vercel.app/'],
    }
 ))
 
