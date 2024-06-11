@@ -14,7 +14,8 @@ export const useSignup = () => {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Request-Method': 'POST'
             },
             
         })

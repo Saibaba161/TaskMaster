@@ -42,7 +42,8 @@ const NoteDetails = ({ note }) => {
             body: JSON.stringify(updatedNote),
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${user.token}`
+                'Authorization': `Bearer ${user.token}`,
+                'Access-Control-Request-Method': 'PATCH'
             },
         })
         
@@ -67,7 +68,8 @@ const NoteDetails = ({ note }) => {
         const response = await fetch('/api/notes/' + note._id, {
             method: 'DELETE',
             headers: {
-                'Authorization': `Bearer ${user.token}`
+                'Authorization': `Bearer ${user.token}`,
+                'Access-Control-Request-Method': 'DELETE'
             }
         })
         const json = await response.json()
