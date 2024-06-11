@@ -11,12 +11,9 @@ const userRoutes = require('./routes/userRoutes')
 const app = express()
 
 app.use(cors(
-    {
+   {
         origin: ['http://localhost:3000','https://taskmaster-frontend-zeta.vercel.app'],
-        methods:['POST', 'GET', 'DELETE', 'PATCH', 'OPTIONS'],
-        credentials: true,
-        allowedHeaders: ['Content-Type', 'Authorization']
-    }
+   }
 ))
 
 //middleware
