@@ -25,6 +25,8 @@ export const useLogin = () => {
         if (!response.ok) {
             setIsLoading(false)
             setError(error)
+            console.log(error)
+            console.log(json)
         }
 
         if(response.ok) {
