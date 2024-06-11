@@ -11,7 +11,8 @@ const Home = () => {
     useEffect(() => {
         const fetchNotes = async () => {
 
-            const response = await fetch('/api/notes',{
+            const response = await fetch('/api/notes', { mode: 'cors'},
+            {
                 headers: {
                     'Authorization': `Bearer ${user.token}`,
                     'Access-Control-Request-Method': 'GET'

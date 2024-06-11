@@ -65,7 +65,8 @@ const NoteDetails = ({ note }) => {
             return
         }
 
-        const response = await fetch('/api/notes/' + note._id, {
+        const response = await fetch('/api/notes/' + note._id,  { mode: 'cors'},
+        {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`,

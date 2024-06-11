@@ -10,7 +10,8 @@ export const useSignup = () => {
         setIsLoading(true); // Set isLoading to true when starting the signup process
         setError(null);
 
-        const response = await fetch('/api/user/signup', {
+        const response = await fetch('/api/user/signup',  { mode: 'cors'},
+        {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {

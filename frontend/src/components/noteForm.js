@@ -22,7 +22,8 @@ const NoteForm = () => {
 
         const note = { title, body, deadline };
 
-        const response = await fetch('/api/notes', {
+        const response = await fetch('/api/notes', { mode: 'cors'},
+        {
             method: 'POST',
             body: JSON.stringify(note),
             headers: {
