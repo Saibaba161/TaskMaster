@@ -7,6 +7,7 @@ const getNotes = async (req, res) => {
 
     const notes = await Note.find({ user_id }).sort({createdAt: -1})
 
+    res.set('Access-Control-Allow-Origin', '*');
     res.status(200).json(notes)
 }
 
@@ -56,6 +57,7 @@ const createNote = async (req,res) => {
     try{
         const user_id = req.user._id            //Grabbing the ID of the user and creating the new docs with that property
         const note = await Note.create({title, body, deadline, user_id})
+        res.set('Access-Control-Allow-Origin', '*');
         res.status(200).json(note)
     } catch(Error) {
         res.status(400).json({Error: Error.message})
@@ -73,6 +75,7 @@ const deleteNote = async (req,res) => {
     if(!note) {
         return res.status(400).json({error: "Note does note exist"})
     }
+    res.set('Access-Control-Allow-Origin', '*');
     res.status(200).json(note)
 }
 
@@ -96,6 +99,7 @@ const updateNote = async (req,res) => {
             { ...req.body },
             { new: true }
         );
+        res.set('Access-Control-Allow-Origin', '*');
         res.status(200).json(updateNote)
     } catch(error) {
         res.status(400).json({ error: error.message })
