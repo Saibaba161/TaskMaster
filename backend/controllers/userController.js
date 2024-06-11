@@ -17,7 +17,7 @@ const loginUser = async(req,res) => {
         const token =  createToken(user._id)
 
         res.status(200).json({email, token})
-        res.header('Access-Control-Allow-Origin', 'https://task-master-frontend-fawn.vercel.app')
+        res.header('Access-Control-Allow-Origin', 'https://task-master-frontend-fawn.vercel.app/login')
     }
     catch(error){
         res.status(404).json({error: error.message})
@@ -36,7 +36,7 @@ const signupUser = async(req,res) => {
         const token = createToken(user._id)
 
         res.status(200).json({email, token})
-        res.header('Access-Control-Allow-Origin', 'https://task-master-frontend-fawn.vercel.app')
+        res.header('Access-Control-Allow-Origin', 'https://task-master-frontend-fawn.vercel.app/signup')
     }
 
     catch(error){
